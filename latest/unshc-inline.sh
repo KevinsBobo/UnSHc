@@ -1,3 +1,4 @@
+#!/bin/bash
 VERSION="1.0"
 
 OBJDUMP=`which objdump`
@@ -671,8 +672,10 @@ if [ $RESULT -eq 0 ]; then
         fi
 
         echo "[*] All done!"
+        clean
+        exit 0
     fi
 fi
 
 clean
-exit 0
+exit 1
